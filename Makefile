@@ -1,4 +1,5 @@
 SRCNAME		=	src/main.c \
+				src/parsing_arguments/parsing.c \
 				src/directory_utils/ft_printdir.c
 
 SRCS 		= ${SRCNAME}

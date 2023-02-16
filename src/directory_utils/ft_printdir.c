@@ -6,15 +6,16 @@ void	ft_printdir(char *s)
 	struct dirent *entry;
 
 	if (!s)
-		//TODO
-		//implement
-		exit(1);
+	{
+		perror("empty_string");
+		exit(EMPTY_STRING_ERR);
+	}
 
 	dir = opendir(s);
 	if (!dir)
 	{
-		perror("opendir");
-		exit(1);
+		perror(s);
+		exit(OPENDIR_ERR);
 	}
 
 	while ((entry = readdir(dir)))

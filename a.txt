@@ -1,0 +1,13 @@
+.
+..
+inc
+ft_ls
+Makefile
+README.md
+b.txt
+tester.sh
+a.txt
+.gitignore
+.git
+.vscode
+src
