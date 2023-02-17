@@ -1,42 +1,5 @@
 #include "../inc/ft_ls.h"
 
-void	error_msg_unrecognized_option(char *message, int count)
-{
-	char	*dash;
-	int		i = 0;
-
-	printf("msg = %s\n", message);
-	// printf("count = %d\n", count);
-
-	if (!(dash = malloc(sizeof(char) * count)))
-	{
-		perror("malloc");
-		exit(ALLOC_ERR);
-	}
-
-	while (i < count)
-	{
-		dash[i] = '-';
-		i++;
-	}
-	dash[i] = '\0';
-	printf("dash = [%s]\n", dash);
-	printf("message = %s\n", message);
-	
-	// PROBLEME FT_PRINTF !!
-	ft_printf("ls: unrecognized option `%s%s'\n", dash, message);
-	ft_printf("usage: ls [-Ralrt] [file ...]\n");
-	free(dash);
-	exit(PARSE_ERR);
-}
-
-void	error_msg_invalid_option(char *message)
-{
-	ft_printf("ls: invalid option -- %s\n", message);
-	ft_printf("usage: ls [-Ralrt] [file ...]\n");
-	exit(PARSE_ERR);
-}
-
 static void	init_struct(t_ls *ls)
 {
 	if (!(ls = malloc(sizeof(t_ls))))

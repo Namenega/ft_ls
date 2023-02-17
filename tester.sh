@@ -48,3 +48,48 @@ echo "Test ${RED}2${END} : ${PURPLE} ls .${END}"
 ls . > b.txt
 compare_files a.txt b.txt
 
+# Testing ls -
+#----> ls: -: No such file or directory
+echo "Test ${RED}2${END} : ${PURPLE} ls -${END}"
+./ft_ls - > a.txt
+ls - > b.txt
+compare_files a.txt b.txt
+
+# Testing ls --
+#----> normal output
+# echo "Test ${RED}2${END} : ${PURPLE} ls --${END}"
+# ./ft_ls -- > a.txt
+# ls -- > b.txt
+# compare_files a.txt b.txt
+
+# Testing ls ---
+#----> ls: unrecognized option `---'
+#----> usage: ls [-@ABCFGHILOPRSTUWabcdefghiklmnopqrstuvwxy1%,] [--color=when] [-D format] [file ...]
+# echo "Test ${RED}2${END} : ${PURPLE} ls ---${END}"
+# ./ft_ls --- > a.txt
+# ls --- > b.txt
+# compare_files a.txt b.txt
+
+# Testing ls -a--
+#----> ls: unrecognized option `---'
+#----> usage: ls [-@ABCFGHILOPRSTUWabcdefghiklmnopqrstuvwxy1%,] [--color=when] [-D format] [file ...]
+# echo "Test ${RED}2${END} : ${PURPLE} ls -a--${END}"
+# ./ft_ls -a-- > a.txt
+# ls -a-- > b.txt
+# compare_files a.txt b.txt
+
+# Testing ls ---a
+#----> ls: unrecognized option `---a'
+#----> usage: ls [-@ABCFGHILOPRSTUWabcdefghiklmnopqrstuvwxy1%,] [--color=when] [-D format] [file ...]
+# echo "Test ${RED}2${END} : ${PURPLE} ls ---a${END}"
+# ./ft_ls ---a > a.txt
+# ls ---a > b.txt
+# compare_files a.txt b.txt
+
+# Testing ls -a--a
+#----> ls: unrecognized option `---a'
+#----> usage: ls [-@ABCFGHILOPRSTUWabcdefghiklmnopqrstuvwxy1%,] [--color=when] [-D format] [file ...]
+# echo "Test ${RED}2${END} : ${PURPLE} ls -a--a${END}"
+# ./ft_ls -a--a > a.txt
+# ls -a--a > b.txt
+# compare_files a.txt b.txt

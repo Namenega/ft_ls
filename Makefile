@@ -1,4 +1,5 @@
 SRCNAME		=	src/main.c \
+				src/errors.c \
 				src/parsing_arguments/parsing.c \
 				src/directory_utils/ft_printdir.c
 
@@ -60,7 +61,7 @@ clean:
 fclean:		clean
 		@echo "$(CYELLOW)Deleting .o files, libft.a, libftprintf.a and ft_ls$(CEND)"
 		@echo "$(CGREY)"
-		${RM} ${FT_LS} ./inc/libft/libft.a ./inc/ft_printf/libftprintf.a
+		${RM} ${FT_LS} ./inc/libft/libft.a ./inc/ft_printf/libftprintf.a ./a.txt ./b.txt
 		@echo "$(CEND)"
 		@echo "$(CGREEN)Deleting done !$(CEND)"
 		@echo
