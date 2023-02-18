@@ -5,8 +5,6 @@ void	error_msg_unrecognized_option(char *message, int count)
 	char	*dash;
 	int		i = 0;
 
-	// printf("msg = %s\n", message);
-
 	if (!(dash = malloc(sizeof(char) * count)))
 	{
 		perror("malloc");
@@ -19,8 +17,6 @@ void	error_msg_unrecognized_option(char *message, int count)
 		i++;
 	}
 	dash[i] = '\0';
-	// printf("dash = [%s]\n", dash);
-	// printf("message = %s\n", message);
 	
 	ft_putstr_fd("ls: unrecognized option `", 1);
 	ft_putstr_fd(dash, 1);
@@ -34,7 +30,7 @@ void	error_msg_unrecognized_option(char *message, int count)
 
 void	error_msg_invalid_option(char *message)
 {
-	ft_printf("ls: invalid option -- %s\n", message);
+	ft_printf("ls: invalid option -- %c\n", message[0]);
 	ft_printf("usage: ls [-Ralrt] [file ...]\n");
 	exit(PARSE_ERR);
 }
